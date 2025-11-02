@@ -1,54 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+
+:root {
+    --accent-red:#ffffff;
+}
 *{
- box-sizing: border-box;
  margin: 0;
  padding: 0;
+ box-sizing: border-box;
 
 }
 body {
     margin: 0;
-    font-family: "sans-serif", 'Bree Serif';
+    font-family: "Bree Serif", "sans-serif", "Source Code Pro", "Lato", "PT sans";
+    padding-top: 50px;
+    line-height: 1.6;
+
 }
-.top-bar{
-    padding: 10px 40px;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
 }
 /* Set link base styles */
 .top-bar a {
     text-decoration: none;
     color: inherit;
-}
-.site-header {
-    background-color: #212121;
+
 }
 /* --- TOP BAR CONTAINER --- */
 .top-bar {
     background-color: #212121; /* Dark background color from the image */
     color: #ffffff; /* Default white text color */
-    padding: 10px 40px; /* Vertical and horizontal padding */
+    padding: 15px 30px; /* Vertical and horizontal padding */
     display: flex;
     justify-content: space-between; /* Pushes logo to the left and nav to the right */
     align-items: center; /* Vertically centers content */
-    height: 40px; /* Ensures a consistent height for the bar */
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    
+
+
 }
 .logo {
-    height: 70px;
+    height: 80px;
     width: auto;
-    size: 180px;
-}
-
-.logo-container {
     display: flex;
-    align-items: center;
+    margin-right: auto;
+    border-left: 6px;
+    border-right: 12px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    padding: 5px;
+    z-index: 1001%;
+ 
+   
+
+}
+    
+.logo-img {
+    height: 100px;
+    width: auto;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    object-fit: contain;
+    font-size: 100px;
+    font-weight: 600;
+
+
 }
 
 .logo-link {
     display: flex;
     align-items: center;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     line-height: 1;
     text-decoration: none;
+    position: relative;
+
 
 }
 
@@ -59,34 +105,152 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 30px; /* Space between navigation items (adjust for desired look) */
+    gap: 20px; /* Space between navigation items (adjust for desired look) */
     align-items: center;
+
+}
+.nav__links {
+    transition: 0.2s;
+    padding: 0;
+
+}
+.top-nav .nav__links li {
+    padding: 0;
 }
 
 .top-nav .nav__links li a {
     color: inherit; /* Inherits white color */
     font-size: 14px; /* Link text size */
-    padding: 5px 0;
+    padding-top: 0;
     text-decoration: none; /* Removes all underlines by default */
-    
-    /* Ensure icon and text are perfectly centered and aligned */
     display: flex;
     align-items: center;
-}
+    transition: color 0.2s ease; text-decoration: 0.2s ease;
+    position: relative;
 
+}
+.top-nav .nav__links li a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* <--- KEY: Starts invisible */
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease-out; /* <--- KEY: The 'time' (duration) of the animation! */
+ 
+}
+.top-nav .nav__links li a:hover::after {
+    width: 100%; /* <--- Expands the width over 0.3s */
+
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #212121;
+    padding: 20px 40px;
+    font-family: "Source Code Pro", sans-serif;
+    font-weight: bold;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+}
+.menu-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    line-height: 1px;
+    transition: color 0.3s ease;
+
+       
+}
+.menu-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+}
+.menu-links a:hover {
+    color: #ffffff;
+}
+.sale-link {
+    color: #212121;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    width: 250px;
+}
+.search-box i {
+    color: #555;
+    margin-right: 8px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+}
+.icon-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.icon-links a {
+    color: white;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.icon-links a:hover {
+    color: #ff1a00;
+}
+.cart-icon {
+    position: relative;
+}
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #ff1a00;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 1px 5px;
+    border-radius: 50%;
+}
 /* --- Specific Underline Styling --- */
 
 /* Adds the underline ONLY to the links with the 'underline-link' class */
 .underline-link {
-    text-decoration: underline !important; 
+    text-decoration-line: underline !important; 
     text-decoration-thickness: 1px;
+    transition-duration: 0;
+
 }
 
 /* --- Icon Link Styling (Contact Us, USD, English) --- */
 
 /* Targets the Font Awesome icon elements */
 .top-nav .nav__links li a i {
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 4px; /* Space between icon and text */
     font-size: 14px; /* Set a consistent icon size */
 }
 
@@ -94,4 +258,158 @@ body {
    These are assumed to be fa-regular fa-circle-phone, fa-solid fa-circle-dollar-to-slot, and fa-solid fa-globe */
 .fa-circle-phone, .fa-circle-dollar-to-slot, .fa-globe {
     font-size: 16px; /* Slightly larger size for the circle icons */
+}
+
+@media (max-width: 900px) {
+    .top-bar, .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+
+.menu-links {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.search-container {
+    width: 100%;
+    justify-content: space-between;
+
+}
+.search-box {
+    width: 100%;
+}
+}
+.hair-link:hover {
+    background-color: #212121;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.2s;
+}
+.hair-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Default: Full width */
+    height: 3px; /* Thickness of the underline */
+    background-color: #ff1a00; /* Red color */
+    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transition: transform 0.3s ease; /* Animation for the movement */
+}
+.hair-link:hover::after {
+    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+}
+.custom-link:hover {
+    background-color: #212121;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.2s;
+}
+.custom-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Default: Full width */
+    height: 3px; /* Thickness of the underline */
+    background-color: #ff1a00; /* Red color */
+    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transition: transform 0.3s ease; /* Animation for the movement */
+}
+.custom-link:hover::after {
+    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+}
+.accessories-link:hover:hover {
+    background-color: #212121;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.2s;
+}
+.accessories-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Default: Full width */
+    height: 3px; /* Thickness of the underline */
+    background-color: #ff1a00; /* Red color */
+    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transition: transform 0.3s ease; /* Animation for the movement */
+}
+.accessories-link:hover::after {
+    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+}
+.help-link:hover {
+    background-color: #212121;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.2s;
+}
+.help-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Default: Full width */
+    height: 3px; /* Thickness of the underline */
+    background-color: #ff1a00; /* Red color */
+    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transition: transform 0.3s ease; /* Animation for the movement */
+}
+.help-link:hover::after {
+    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+}
+.about-link:hover {
+    background-color: #212121;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.2s;
+}
+.about-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Default: Full width */
+    height: 3px; /* Thickness of the underline */
+    background-color: #ff1a00; /* Red color */
+    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transition: transform 0.3s ease; /* Animation for the movement */
+}
+.about-link:hover::after {
+    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+
+}
+.sale-link {
+    color: var(--accent-red);
+}
+.sale-link:hover {
+    background-color: #212121;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: 0.2s;
+}
+.sale-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Default: Full width */
+    height: 3px; /* Thickness of the underline */
+    background-color: #ff1a00; /* Red color */
+    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transition: transform 0.3s ease; /* Animation for the movement */
+    
+}
+.sale-link:hover::after {
+    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+    
 }
