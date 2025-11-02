@@ -2,7 +2,7 @@
 
 
 :root {
-    --accent-red:#ffffff;
+    --accent-red:#ff1a00;
 }
 *{
  margin: 0;
@@ -41,7 +41,7 @@ body {
 .top-bar {
     background-color: #212121; /* Dark background color from the image */
     color: #ffffff; /* Default white text color */
-    padding: 15px 30px; /* Vertical and horizontal padding */
+    padding: 30px 50px; /* Vertical and horizontal padding */
     display: flex;
     justify-content: space-between; /* Pushes logo to the left and nav to the right */
     align-items: center; /* Vertically centers content */
@@ -57,17 +57,17 @@ body {
 
 }
 .logo {
-    height: 80px;
+    height: 120px;
     width: auto;
-    display: flex;
+    display: block;
     margin-right: auto;
-    border-left: 6px;
+    border-left: 3px;
     border-right: 12px;
     position: fixed;
-    top: 10px;
-    left: 20px;
+    top: 2px;
+    left: 8px;
     padding: 5px;
-    z-index: 1001%;
+    
  
    
 
@@ -80,8 +80,8 @@ body {
     margin: auto;
     margin-top: 5px;
     object-fit: contain;
-    font-size: 100px;
-    font-weight: 600;
+    font-size: 500px;
+    font-weight: 800px;
 
 
 }
@@ -149,11 +149,11 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #212121;
-    padding: 20px 40px;
+    padding: 15px 70px; /* Vertical and horizontal padding */
     font-family: "Source Code Pro", sans-serif;
     font-weight: bold;
     position: fixed;
-    top: 50px;
+    top: 80px;
     left: 0;
     width: 100%;
     z-index: 999;
@@ -168,6 +168,9 @@ body {
 
        
 }
+.menu-links .special-color {
+    color: var(--accent-red);
+}
 .menu-links a {
     text-decoration: none;
     color: white;
@@ -180,6 +183,9 @@ body {
 }
 .menu-links a:hover {
     color: #ffffff;
+}
+.menu-links .special-color:hover {
+    color: #ff1a00;
 }
 .sale-link {
     color: #212121;
@@ -196,6 +202,7 @@ body {
     border-radius: 6px;
     padding: 8px 12px;
     width: 250px;
+    cursor: pointer;
 }
 .search-box i {
     color: #555;
@@ -207,6 +214,7 @@ body {
     font-size: 14px;
     color: #333;
     width: 100%;
+    cursor: pointer;
 }
 .icon-links {
     display: flex;
@@ -220,7 +228,7 @@ body {
     transition: color 0.3s ease;
 }
 .icon-links a:hover {
-    color: #ff1a00;
+    color: #ffffff;
 }
 .cart-icon {
     position: relative;
@@ -282,7 +290,7 @@ body {
 }
 }
 .hair-link:hover {
-    background-color: #212121;
+    background-color: black;
     text-decoration: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -291,19 +299,20 @@ body {
 .hair-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%; /* Default: Full width */
     height: 3px; /* Thickness of the underline */
     background-color: #ff1a00; /* Red color */
-    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transform: scaleX(0); /* Start position: Completely hidden below the link */
     transition: transform 0.3s ease; /* Animation for the movement */
+    border-radius: 50px;
 }
 .hair-link:hover::after {
     transform: translateY(0); /* End position: Moves up to the bottom of the link */
 }
 .custom-link:hover {
-    background-color: #212121;
+    background-color: black;
     text-decoration: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -312,40 +321,42 @@ body {
 .custom-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%; /* Default: Full width */
     height: 3px; /* Thickness of the underline */
     background-color: #ff1a00; /* Red color */
-    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transform: scaleX(0); /* Start position: Completely hidden below the link */
     transition: transform 0.3s ease; /* Animation for the movement */
+    border-radius: 50px;
 }
 .custom-link:hover::after {
     transform: translateY(0); /* End position: Moves up to the bottom of the link */
 }
 .accessories-link:hover:hover {
-    background-color: #212121;
+    background-color: black;
     text-decoration: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     transition: 0.2s;
 }
 .accessories-link::after {
-    content: '';
+   content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%; /* Default: Full width */
     height: 3px; /* Thickness of the underline */
     background-color: #ff1a00; /* Red color */
-    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transform: scaleX(0); /* Start position: Completely hidden below the link */
     transition: transform 0.3s ease; /* Animation for the movement */
+    border-radius: 50px;
 }
 .accessories-link:hover::after {
     transform: translateY(0); /* End position: Moves up to the bottom of the link */
 }
 .help-link:hover {
-    background-color: #212121;
+    background-color: black;
     text-decoration: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -354,19 +365,20 @@ body {
 .help-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%; /* Default: Full width */
     height: 3px; /* Thickness of the underline */
     background-color: #ff1a00; /* Red color */
-    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transform: scaleX(0); /* Start position: Completely hidden below the link */
     transition: transform 0.3s ease; /* Animation for the movement */
+    border-radius: 50px;
 }
 .help-link:hover::after {
     transform: translateY(0); /* End position: Moves up to the bottom of the link */
 }
 .about-link:hover {
-    background-color: #212121;
+    background-color: black;
     text-decoration: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -375,13 +387,14 @@ body {
 .about-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%; /* Default: Full width */
     height: 3px; /* Thickness of the underline */
     background-color: #ff1a00; /* Red color */
-    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transform: scaleX(0); /* Start position: Completely hidden below the link */
     transition: transform 0.3s ease; /* Animation for the movement */
+    border-radius: 50px;
 }
 .about-link:hover::after {
     transform: translateY(0); /* End position: Moves up to the bottom of the link */
@@ -391,7 +404,7 @@ body {
     color: var(--accent-red);
 }
 .sale-link:hover {
-    background-color: #212121;
+    background-color: black;
     text-decoration: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -405,11 +418,15 @@ body {
     width: 100%; /* Default: Full width */
     height: 3px; /* Thickness of the underline */
     background-color: #ff1a00; /* Red color */
-    transform: translateY(100%); /* Start position: Completely hidden below the link */
+    transform: scaleX(0); /* Start position: Completely hidden below the link */
     transition: transform 0.3s ease; /* Animation for the movement */
+    border-radius: 50px;
     
 }
 .sale-link:hover::after {
     transform: translateY(0); /* End position: Moves up to the bottom of the link */
     
+}
+.special-color{
+    color: #ff1a00;
 }
