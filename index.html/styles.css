@@ -54,14 +54,13 @@ body {
     color: inherit;
 
 }
-/* --- TOP BAR CONTAINER --- */
 .top-bar {
-    background-color: #212121; /* Dark background color from the image */
-    color: #ffffff; /* Default white text color */
-    padding: 30px 50px; /* Vertical and horizontal padding */
+    background-color: #212121; 
+    color: #ffffff; 
+    padding: 30px 50px; 
     display: flex;
-    justify-content: space-between; /* Pushes logo to the left and nav to the right */
-    align-items: center; /* Vertically centers content */
+    justify-content: space-between; 
+    align-items: center; 
     position: fixed;
     top: 0%;
     left: 0%;
@@ -117,14 +116,12 @@ body {
 
 }
 
-/* --- Navigation Links --- */
-
 .top-nav .nav__links {
-    list-style: none; /* Removes bullets */
+    list-style: none; 
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Space between navigation items (adjust for desired look) */
+    gap: 20px; 
     align-items: center;
 
 }
@@ -138,10 +135,10 @@ body {
 }
 
 .top-nav .nav__links li a {
-    color: inherit; /* Inherits white color */
-    font-size: 14px; /* Link text size */
+    color: inherit; 
+    font-size: 14px; 
     padding-top: 0;
-    text-decoration: none; /* Removes all underlines by default */
+    text-decoration: none; 
     display: flex;
     align-items: center;
     transition: color 0.2s ease; text-decoration: 0.2s ease;
@@ -151,16 +148,16 @@ body {
 .top-nav .nav__links li a::after {
     content: '';
     position: absolute;
-    width: 0; /* <--- KEY: Starts invisible */
+    width: 0; 
     height: 1px;
     bottom: -2px;
     left: 0;
     background-color: #ffffff;
-    transition: width 0.3s ease-out; /* <--- KEY: The 'time' (duration) of the animation! */
+    transition: width 0.3s ease-out;
  
 }
 .top-nav .nav__links li a:hover::after {
-    width: 100%; /* <--- Expands the width over 0.3s */
+    width: 100%; 
 
 }
 .main-nav {
@@ -169,7 +166,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #212121;
-    padding: 5px 60px; /* Vertical and horizontal padding */
+    padding: 5px 60px; 
     font-family: sans-serif;
     font-weight: bold;
     position: fixed;
@@ -285,9 +282,8 @@ body {
     padding: 1px 5px;
     border-radius: 50%;
 }
-/* --- Specific Underline Styling --- */
 
-/* Adds the underline ONLY to the links with the 'underline-link' class */
+
 .underline-link {
     text-decoration-line: underline !important; 
     text-decoration-thickness: 1px;
@@ -295,18 +291,12 @@ body {
 
 }
 
-/* --- Icon Link Styling (Contact Us, USD, English) --- */
-
-/* Targets the Font Awesome icon elements */
 .top-nav .nav__links li a i {
-    margin-right: 4px; /* Space between icon and text */
-    font-size: 18px; /* Set a consistent icon size */
+    margin-right: 4px; 
+    font-size: 18px; 
 }
-
-/* Specific styling for the circle/rounded icons (Contact Us, USD, English) 
-   These are assumed to be fa-regular fa-circle-phone, fa-solid fa-circle-dollar-to-slot, and fa-solid fa-globe */
 .fa-circle-phone, .fa-circle-dollar-to-slot, .fa-globe {
-    font-size: 16px; /* Slightly larger size for the circle icons */
+    font-size: 16px;
 }
 
 @media (max-width: 900px) {
@@ -330,15 +320,15 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Default: Full width */
-    height: 1px; /* Thickness of the underline */
-    background-color: #ff1a00; /* Red color */
-    transform: scaleX(0); /* Start position: Completely hidden below the link */
-    transition: 0.4s ease-out; /* Animation for the movement */
+    width: 100%; 
+    height: 1px; 
+    background-color:
+    transform: scaleX(0); 
+    transition: 0.4s ease-out; 
     border-radius: 50px;
 }
 .hair-link:hover::after {
-    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+    transform: translateY(0); 
 }
 .custom-link:hover {
     background-color: black;
@@ -352,15 +342,15 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Default: Full width */
-    height: 1px; /* Thickness of the underline */
-    background-color: #ff1a00; /* Red color */
-    transform: scaleX(0); /* Start position: Completely hidden below the link */
-    transition: 0.4s ease-out; /* Animation for the movement */
+    width: 100%;
+    height: 1px; 
+    background-color: #ff1a00; 
+    transform: scaleX(0); 
+    transition: 0.4s ease-out; 
     border-radius: 50px;
 }
 .custom-link:hover::after {
-    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+    transform: translateY(0); 
 }
 .accessories-link:hover:hover {
     background-color: black;
@@ -374,15 +364,15 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Default: Full width */
-    height: 1px; /* Thickness of the underline */
-    background-color: #ff1a00; /* Red color */
-    transform: scaleX(0); /* Start position: Completely hidden below the link */
-    transition: 0.4s ease-out; /* Animation for the movement */
+    width: 100%; 
+    height: 1px; 
+    background-color: #ff1a00; 
+    transform: scaleX(0); 
+    transition: 0.4s ease-out; 
     border-radius: 50px;
 }
 .accessories-link:hover::after {
-    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+    transform: translateY(0); 
 }
 .hair-maintenance-link:hover:hover {
     background-color: black;
@@ -396,15 +386,15 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Default: Full width */
-    height: 1px; /* Thickness of the underline */
-    background-color: #ff1a00; /* Red color */
-    transform: scaleX(0); /* Start position: Completely hidden below the link */
-    transition: 0.4s ease-out; /* Animation for the movement */
+    width: 100%; 
+    height: 1px; 
+    background-color: #ff1a00; 
+    transform: scaleX(0); 
+    transition: 0.4s ease-out; 
     border-radius: 50px;
 }
 .hair-maintenance-link:hover::after {
-    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+    transform: translateY(0); 
 }
 .help-link:hover {
     background-color: black;
@@ -418,15 +408,15 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Default: Full width */
-    height: 1px; /* Thickness of the underline */
-    background-color: #ff1a00; /* Red color */
-    transform: scaleX(0); /* Start position: Completely hidden below the link */
-    transition: 0.4s ease-out; /* Animation for the movement */
+    width: 100%; 
+    height: 1px; 
+    background-color: #ff1a00; 
+    transform: scaleX(0); 
+    transition: 0.4s ease-out; 
     border-radius: 50px;
 }
 .help-link:hover::after {
-    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+    transform: translateY(0); 
 }
 .about-link:hover {
     background-color: black;
@@ -440,15 +430,15 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Default: Full width */
-    height: 1px; /* Thickness of the underline */
-    background-color: #ff1a00; /* Red color */
-    transform: scaleX(0); /* Start position: Completely hidden below the link */
-    transition: 0.4s ease-out; /* Animation for the movement */
+    width: 100%; 
+    height: 1px; 
+    background-color: #ff1a00; 
+    transform: scaleX(0); 
+    transition: 0.4s ease-out; 
     border-radius: 50px;
 }
 .about-link:hover::after {
-    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+    transform: translateY(0); /
 
 }
 .special-color {
@@ -466,16 +456,16 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Default: Full width */
-    height: 1px; /* Thickness of the underline */
-    background-color: #ff1a00; /* Red color */
-    transform: scaleX(0); /* Start position: Completely hidden below the link */
-    transition: 0.4s ease-out; /* Animation for the movement */
+    width: 100%;
+    height: 1px; 
+    background-color: #ff1a00; 
+    transform: scaleX(0); 
+    transition: 0.4s ease-out; 
     border-radius: 50px;
     
 }
 .special-color:hover::after {
-    transform: translateY(0); /* End position: Moves up to the bottom of the link */
+    transform: translateY(0); 
     
 }
 .special-color-item {
@@ -864,12 +854,12 @@ body {
     box-sizing: border-box;
 }
 .your-hair-your-style-container {
-    position: relative; /* Essential for absolutely positioning the button container */
-    min-height: 500px; /* Adjust as needed */
+    position: relative;
+    min-height: 500px; 
     width: 100%;
     background-size: cover;
     background-position: center;
-    padding-bottom: 80px; /* Add space for the buttons at the bottom */
+    padding-bottom: 80px; 
 }
 .image-1 {
     background-image: url(images/image1.png);
@@ -924,11 +914,11 @@ body {
 .button-container {
     position: absolute;
     margin-top: 60px;
-    bottom: 30px; /* Adjust vertical position from the bottom */
-    left: 50%; /* Start at the center */
-    transform: translateX(-50%); /* Move back by half its own width for true centering */
+    bottom: 30px;
+    left: 50%; 
+    transform: translateX(-50%);
     display: flex;
-    gap: 15px; /* Space between the two buttons */
+    gap: 15px; 
 }
 .image-1-btn {
     background-color: var(--accent-red);
