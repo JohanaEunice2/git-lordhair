@@ -48,19 +48,20 @@ body {
     opacity: 0;
     pointer-events: none;
 }
-/* Set link base styles */
+
 .top-bar a {
     text-decoration: none;
     color: inherit;
 
 }
+
 .top-bar {
     background-color: #212121; 
     color: #ffffff; 
     padding: 30px 50px; 
     display: flex;
     justify-content: space-between; 
-    align-items: center; 
+    align-items: center;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -115,15 +116,13 @@ body {
 
 
 }
-
 .top-nav .nav__links {
     list-style: none; 
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; 
+    gap: 20px;
     align-items: center;
-
 }
 .nav__links {
     transition: 0.2s;
@@ -148,12 +147,12 @@ body {
 .top-nav .nav__links li a::after {
     content: '';
     position: absolute;
-    width: 0; 
+    width: 0;
     height: 1px;
     bottom: -2px;
     left: 0;
     background-color: #ffffff;
-    transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out; 
  
 }
 .top-nav .nav__links li a:hover::after {
@@ -282,21 +281,18 @@ body {
     padding: 1px 5px;
     border-radius: 50%;
 }
-
-
 .underline-link {
     text-decoration-line: underline !important; 
     text-decoration-thickness: 1px;
     transition-duration: 4s ease-out;
 
 }
-
 .top-nav .nav__links li a i {
     margin-right: 4px; 
     font-size: 18px; 
 }
 .fa-circle-phone, .fa-circle-dollar-to-slot, .fa-globe {
-    font-size: 16px;
+    font-size: 16px; 
 }
 
 @media (max-width: 900px) {
@@ -322,8 +318,8 @@ body {
     left: 0;
     width: 100%; 
     height: 1px; 
-    background-color:
-    transform: scaleX(0); 
+    background-color: #ff1a00; 
+    transform: scaleX(0);
     transition: 0.4s ease-out; 
     border-radius: 50px;
 }
@@ -342,7 +338,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100%; 
     height: 1px; 
     background-color: #ff1a00; 
     transform: scaleX(0); 
@@ -364,9 +360,9 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: 1px; 
-    background-color: #ff1a00; 
+    background-color: #ff1a00;
     transform: scaleX(0); 
     transition: 0.4s ease-out; 
     border-radius: 50px;
@@ -390,7 +386,7 @@ body {
     height: 1px; 
     background-color: #ff1a00; 
     transform: scaleX(0); 
-    transition: 0.4s ease-out; 
+    transition: 0.4s ease-out;
     border-radius: 50px;
 }
 .hair-maintenance-link:hover::after {
@@ -433,12 +429,12 @@ body {
     width: 100%; 
     height: 1px; 
     background-color: #ff1a00; 
-    transform: scaleX(0); 
+    transform: scaleX(0);
     transition: 0.4s ease-out; 
     border-radius: 50px;
 }
 .about-link:hover::after {
-    transform: translateY(0); /
+    transform: translateY(0); 
 
 }
 .special-color {
@@ -456,8 +452,8 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 1px; 
+    width: 100%; 
+    height: 1px;
     background-color: #ff1a00; 
     transform: scaleX(0); 
     transition: 0.4s ease-out; 
@@ -852,9 +848,10 @@ body {
 .shop-now-right-btn:hover {
     background-color: #f01e00;
     box-sizing: border-box;
+
 }
 .your-hair-your-style-container {
-    position: relative;
+    position: relative; 
     min-height: 500px; 
     width: 100%;
     background-size: cover;
@@ -914,9 +911,9 @@ body {
 .button-container {
     position: absolute;
     margin-top: 60px;
-    bottom: 30px;
+    bottom: 30px; 
     left: 50%; 
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
     display: flex;
     gap: 15px; 
 }
@@ -991,3 +988,64 @@ body {
                 margin-top: -130px;
             }
         }
+
+.slideshow-container {
+    width: 780px; 
+    height: 600px;
+    position: relative;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    overflow: hidden; 
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    margin-top: -680px;
+    margin-left: -270px;
+}
+
+.slide-track {
+    display: flex; 
+    width: 400%; 
+    animation: slide-animation 16s ease-in-out infinite; 
+}
+
+.slide-track img {
+    width: 25%; 
+    height: 600px;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: block;
+    height: auto; 
+}
+
+@keyframes slide-animation {
+    0%   { margin-left: 0; }
+    20%  { margin-left: 0; } 
+    
+    25%  { margin-left: -100%; } 
+    45%  { margin-left: -100%; } 
+    
+    50%  { margin-left: -200%; } 
+    70%  { margin-left: -200%; } 
+    
+    75%  { margin-left: -300%; } 
+    95%  { margin-left: -300%; } 
+    
+    100% { margin-left: -400%; } 
+}
+@media (max-width: 768px) {
+    .your-hair-your-style-container {
+        flex-direction: column; 
+    }
+
+    .slideshow-container {
+        border-right: none;
+        border-bottom: 1px solid #eee; 
+    
+    }
+}
