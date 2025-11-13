@@ -1049,3 +1049,53 @@ body {
     
     }
 }
+.guarantees-container {
+            background-color: #fff;
+            padding: 20px 600px;
+            margin-top: -0px;
+            margin-left: -1070px;
+            border-radius: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .guarantees-container h2 {
+            text-align: center;
+            margin-bottom: 59px;
+            margin-left: -500px;
+            color: #000000;
+            font-size: 52px;
+            white-space: nowrap;
+        }
+        
+        .guarantee-card {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-direction: row;
+        }
+    
+
+        .guarantee-card i {
+            list-style: none;
+            align-items: row;
+            font-size: 40px;
+            color: #000000;
+            margin-bottom: 0;
+            margin-left: 0;
+            text-align: center;
+            min-width: 210px;
+        
+    
+    
+            
+        }
+        .guarantee-card h3 {
+            position: relative;
+            font-size: 22px;
+            line-height: 19px;
+            margin-bottom: 0;
+            color: #000000;
+            display: block;
+            white-space: nowrap;
+            text-align: justify;
+        }
